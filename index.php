@@ -56,7 +56,7 @@
 
 <?php
 
-function function_alert($message)
+function alertMessage($message)
 {
 ?>
     <script>
@@ -85,12 +85,12 @@ if (isset($_POST["submit"])) {
 
         if (move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $target_file)) {
             if (!$alertShown) {
-                function_alert("The file has been uploaded successfully!");
+                alertMessage("The file has been uploaded successfully!");
                 $alertShown = true;
             }
         } else {
             if (!$alertShown) {
-                function_alert("Sorry, there was an error uploading your file");
+                alertMessage("Sorry, there was an error uploading your file");
                 $alertShown = true;
             }
         }
